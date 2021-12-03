@@ -1,0 +1,39 @@
+.extention {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .content {
+    @include grid3Col();
+    margin-top: 80px;
+    .box {
+      @include largeScreen() {
+        &:nth-child(2) {
+          transform: translateY(50px);
+        }
+        &:last-child {
+          transform: translateY(50px * 2);
+        }
+      }
+      text-align: center;
+      padding: 30px 15px;
+      border-radius: 15px;
+      background-color: $White;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+      img {
+        margin: 25px 0;
+      }
+      h1 {
+        color: $VeryDarkBlue;
+        font-size: size(hSize);
+        font-weight: weight(regulerWeight);
+        margin: 25px 0;
+      }
+      h3 {
+        color: $GrayishBlue;
+        font-size: size(titleSize);
+        font-weight: weight(lightWeight);
+        margin: 25px 0;
+      }
+    }
+  }
+}

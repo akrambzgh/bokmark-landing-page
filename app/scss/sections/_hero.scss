@@ -1,0 +1,50 @@
+.hero {
+  @include largeScreen() {
+    @include flex(space-between, center, row-reverse);
+  }
+  &__img {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 80%;
+      height: 80%;
+      background-color: $SoftBlue;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      z-index: -1;
+    }
+  }
+  &__info {
+    text-align: center;
+    padding: 30px 0;
+    @include largeScreen() {
+      text-align: left;
+      width: 50%;
+    }
+    h1 {
+      color: $VeryDarkBlue;
+      font-size: size(hSize);
+      font-weight: weight(regulerWeight);
+      margin: 0 0 10px 0;
+    }
+    p {
+      color: $VeryDarkBlue;
+      font-size: size(pSize);
+      font-weight: weight(lightWeight);
+      margin: 0 0 10px 0;
+    }
+    .buttons {
+      button {
+        display: inline-block;
+        @include largeScreen() {
+          &:first-child {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}

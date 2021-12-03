@@ -1,0 +1,55 @@
+.footer {
+  padding: 0;
+  &__menu {
+    @include flex(center, center, column);
+    @include largeScreen() {
+      @include flex(space-between, center, row);
+    }
+    text-align: center;
+    background-color: $VeryDarkBlue;
+    padding: 30px;
+    a.logo {
+      img {
+        filter: invert(1) brightness(1);
+      }
+    }
+    ul {
+      @include largeScreen() {
+        @include flex(space-between, center, row);
+      }
+      li {
+        a {
+          padding: 0 18px;
+          font-size: size(pSize);
+          text-transform: uppercase;
+          transition: $mainTransition;
+          color: $White;
+          @media (max-width: 991px) {
+            display: block;
+            width: 100%;
+            padding: 20px 0;
+          }
+          &:hover {
+            color: $SoftRed;
+          }
+        }
+      }
+    }
+    .social {
+      padding: 15px 0;
+      @include flex(space-between, center, row);
+      .icons {
+        padding: 0 15px;
+        i {
+          color: $White;
+          font-size: 30px;
+          cursor: pointer;
+          transition: $mainTransition;
+          &:hover {
+            color: $SoftRed;
+          }
+        }
+      }
+    }
+  }
+}

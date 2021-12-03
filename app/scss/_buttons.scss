@@ -1,0 +1,44 @@
+button,
+.button {
+  display: inline-block;
+  padding: 7px 25px;
+  border-radius: 5px;
+  font-size: size(linkSize);
+  font-weight: weight(regulerWeight);
+  background: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $mainTransition;
+  @media (max-width: 991px) {
+    & {
+      padding: 10px;
+    }
+  }
+  &__red {
+    border: 2px solid $SoftRed;
+    background-color: $SoftRed;
+    color: $White;
+    &:hover {
+      background: 0;
+      color: $SoftRed;
+    }
+  }
+  &__blue {
+    border: 2px solid $SoftBlue;
+    background-color: $SoftBlue;
+    color: $White;
+    &:hover {
+      background: 0;
+      color: $SoftBlue;
+    }
+  }
+  &__black {
+    border: 2px solid lighten($GrayishBlue, 30%);
+    background-color: lighten($GrayishBlue, 30%);
+    color: $VeryDarkBlue;
+    &:hover {
+      background: 0;
+      color: $VeryDarkBlue;
+    }
+  }
+}

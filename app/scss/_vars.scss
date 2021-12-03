@@ -1,0 +1,40 @@
+// Colors
+
+// Primary
+
+$SoftBlue: hsl(231, 69%, 60%);
+$SoftRed: hsl(0, 94%, 66%);
+$White: hsl(0, 0%, 100%);
+
+// Neutral
+
+$GrayishBlue: hsl(229, 8%, 60%);
+$VeryDarkBlue: hsl(229, 31%, 21%);
+
+// Typography
+
+// Body Copy
+
+@function size($mySize) {
+  $Fontsize: 18px;
+  $sizes: (
+    "hSize": 35px,
+    "pSize": 18px,
+    "linkSize": 16px,
+    "titleSize": 22px,
+    "buttonSize": 19px,
+  );
+
+  @return map-get($sizes, $mySize);
+}
+
+// font-size
+@function weight($myWeight) {
+  $weights: (
+    "lightWeight": 300,
+    "regulerWeight": 600,
+  );
+  @return map-get($weights, $myWeight);
+}
+
+$mainTransition: 0.5s;

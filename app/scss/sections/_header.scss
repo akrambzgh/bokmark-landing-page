@@ -1,0 +1,115 @@
+// header
+.header {
+  // padding: 10px 0;
+  background: $White;
+  z-index: 3;
+  position: relative;
+  .nav {
+    @include flex(space-between, flex-start, row);
+    padding: 25px 0;
+    a.logo {
+      position: relative;
+      z-index: 3;
+      img {
+        min-height: 20px;
+      }
+    }
+    .list {
+      transition: $mainTransition;
+    }
+  }
+}
+.hamburger {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  @include largeScreen() {
+    & {
+      display: none;
+    }
+  }
+  &__line {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: $VeryDarkBlue;
+    border-radius: 3px;
+    margin-bottom: 6px;
+  }
+}
+.main__head {
+  display: flex;
+  overflow: hidden;
+  transition: $mainTransition;
+  @media (max-width: 991px) {
+    &.open {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0%;
+      width: 100%;
+      height: 100vh;
+      opacity: 0.9;
+      background-color: lighten($VeryDarkBlue, 20%);
+      color: $White;
+    }
+    display: none;
+  }
+  li {
+    a {
+      padding: 0 18px;
+      color: $VeryDarkBlue;
+      font-size: size(pSize);
+      text-transform: uppercase;
+      transition: $mainTransition;
+      @media (max-width: 991px) {
+        color: $White;
+        display: block;
+        width: 100%;
+        padding: 20px 100px;
+        border-top: 1px solid $GrayishBlue;
+        border-bottom: 1px solid $GrayishBlue;
+      }
+      &:hover {
+        color: $SoftRed;
+      }
+    }
+  }
+  button {
+    @media (max-width: 991px) {
+      & {
+        margin-top: 20px;
+        width: 80%;
+        padding: 18px 100px;
+        background: 0;
+        border: 2px solid $White;
+        color: $White;
+      }
+    }
+  }
+  .social {
+    display: flex;
+    flex-direction: row;
+    @include flex(space-between, center, column);
+    @include largeScreen() {
+      display: none;
+    }
+    padding: 70px 0;
+    .icons {
+      i {
+        font-size: 20px;
+        padding: 18px 0;
+        transition: $mainTransition;
+        &:hover {
+          color: $SoftRed;
+        }
+      }
+    }
+  }
+}

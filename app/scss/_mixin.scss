@@ -1,0 +1,17 @@
+@mixin flex($js-c, $al-i, $fl-d) {
+  display: flex;
+  justify-content: $js-c;
+  align-items: $al-i;
+  flex-direction: $fl-d;
+}
+@mixin grid3Col() {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+@mixin largeScreen() {
+  @media (min-width: 992px) {
+    @content;
+  }
+}

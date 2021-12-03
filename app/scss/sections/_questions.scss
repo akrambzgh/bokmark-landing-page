@@ -1,0 +1,38 @@
+.questions {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .questions__box {
+    margin-top: 80px;
+    @include largeScreen() {
+      cursor: pointer;
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    .question-page {
+      @include flex(space-between, center, row);
+      padding: 15px 0;
+      border-top: 1px solid $GrayishBlue;
+      cursor: pointer;
+      h2 {
+        font-size: size(linkSize);
+        font-weight: weight(lightWeight);
+        color: $GrayishBlue;
+      }
+    }
+    .text {
+      display: none;
+      p {
+        color: $VeryDarkBlue;
+        font-size: size(pSize);
+        font-weight: weight(lightWeight);
+        padding: 15px 0;
+      }
+    }
+  }
+  button {
+    display: block;
+    margin: 20px auto 0;
+  }
+}
